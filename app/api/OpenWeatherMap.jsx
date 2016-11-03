@@ -13,8 +13,8 @@ module.exports = {
       }else{
         return {temp:res.data.main.temp,weather:res.data.weather[0].description};
       }
-    },function(res){
-      throw new Error(res.data.message);
+    },function(err){
+      throw new Error(err.response.data.message);
     });
   }
 }
