@@ -14,7 +14,7 @@ module.exports = {
         return {temp:res.data.main.temp,weather:res.data.weather[0].description};
       }
     },function(err){
-      throw new Error(err.res.data.message);
+      throw new Error(err.response.data.message);
     });
   }
 }
